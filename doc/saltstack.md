@@ -1,5 +1,7 @@
 SaltStack
------
+=====
+
+[SaltStack](www.saltstack.com) is a master/slave provision system in python.
 
 # References
 
