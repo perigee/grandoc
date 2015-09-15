@@ -13,3 +13,35 @@ Finally, either use route53 failover (with weighted routing rule, add extreme we
 
 
 ![Routing](images/maintenancemode.jpg "Routing setting")
+
+
+
+
+# Route53 DNS failover
+
+## ChangeBatch dict in `boto3`
+
+
+```python
+changeBatch = {
+        'Comment': 'Creado desde mi aplicaciden',
+        'Changes': [
+            {
+                'Action': 'CREATE',
+                'ResourceRecordSet': {
+                    'Name': 'xpg.testing.com.',
+                    'SetIdentifier': 'xpg-Primary',
+                    'Type': 'A',
+                    'TTL': 30,
+                    'ResourceRecords': [
+                        {
+                            'Value': '52.3.53.217'
+                        },
+                    ],
+                    'Failover': 'PRIMARY',
+                    'HealthCheckId': 'ff308f9a-2ff1-4627-9d18-bfb8d2f1fe18',
+                }
+            },
+        ]
+    }
+```
