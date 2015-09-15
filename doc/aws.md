@@ -19,7 +19,9 @@ Finally, either use route53 failover (with weighted routing rule, add extreme we
 
 # Route53 DNS failover
 
-## ChangeBatch dict in `boto3`
+## ChangeBatch dict example 
+
+### create the failover primary in `boto3`
 
 
 ```python
@@ -45,3 +47,36 @@ changeBatch = {
         ]
     }
 ```
+
+### update a simple recordset with type A in `boto3`
+
+```python 
+changBatch = {
+        'Comment': 'update record set',
+        'Changes': [
+            {
+                'Action': 'UPSERT',
+                'ResourceRecordSet': {
+                    'Name': 'stagedb.inhouse.ly.',
+                    'Type': 'A',
+                    'TTL': 30,
+                    'ResourceRecords': [
+                        {
+                            'Value': '10.0.2.248'
+                        },
+                    ],
+                }
+            },
+        ]
+    }
+
+response = client.change_resource_record_sets(
+    HostedZoneId='hostidiididiid',
+    ChangeBatch=changeBatch)
+```
+
+
+
+
+
+
