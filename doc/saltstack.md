@@ -7,7 +7,7 @@ SaltStack
 
 Master and minion 
 
-![SaltStack Architecture](images/saltarch.jpg "Architecture")
+![SaltStack Architecture](images/saltarch.png "Architecture")
 
 # References
 
