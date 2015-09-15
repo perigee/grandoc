@@ -3,9 +3,11 @@ SaltStack
 
 [SaltStack](www.saltstack.com) is a master/slave provision system in python, it is using zeromq for asynchonous communication. 
 
-# Achitecture 
+# Architecture 
 
-Master and minion
+Master and minion 
+
+![SaltStack Architecture](images/saltarch.jpg "Architecture")
 
 # References
 

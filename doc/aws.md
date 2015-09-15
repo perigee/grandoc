@@ -9,7 +9,7 @@ AWS hack
 
 - Cross direct the Route53 Recordset (CNAME) and CloudFront (CNAME, alternative) each other for routing.
 
-Finally, either use route53 failover (with weighted routing rule, add extreme weight on maintenance recordset) or just simply redirect the main DNS to maintenance domain. Following figure demonstrates tthe setting for Route53, Cloudfront and S3. 
+Finally, either use route53 failover (with weighted routing rule, add extreme weight on maintenance recordset) or just simply redirect the main DNS to maintenance domain. Following figure demonstrates the routing setting for Route53, Cloudfront and S3. 
 
 
-![Alt text](images/maintenancemode.jpg "Routing setting")
+![Routing](images/maintenancemode.jpg "Routing setting")
