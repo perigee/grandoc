@@ -1,7 +1,7 @@
 SaltStack
 =====
 
-[SaltStack](www.saltstack.com) is a master/slave provision system in python.
+[SaltStack](www.saltstack.com) is a master/slave provision system in python, it is using zeromq for asynchonous communication. 
 
 # References
 
