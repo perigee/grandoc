@@ -18,7 +18,7 @@ Finally, either use route53 failover (with weighted routing rule, add extreme we
 
 ## Attention
 
-- The multiple redirection of alias domain may be broken because of the CNAME setting in CloudFront. (Need deep investigation)
+- The multiple redirection of alias domain may be broken because of the CNAME setting in CloudFront, so you can use wildcard inside CloudFront's `alternate domain name` to accept all the subdomain. 
 - Another solution may just launch up an instance with maintenance page only, and join it into ELB. 
 
 
@@ -94,4 +94,4 @@ response = client.change_resource_record_sets(
 The tags are put into *[ ]* for easy recalling.
 
 - [cloudfront, s3, route53] http://www.michaelgallego.fr/blog/2013/08/27/static-website-on-s3-cloudfront-and-route-53-the-right-way/
-
+- [cloudfront, s3, ssl] https://bryce.fisher-fleig.org/blog/setting-up-ssl-on-aws-cloudfront-and-s3/
