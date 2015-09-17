@@ -82,6 +82,11 @@ response = client.change_resource_record_sets(
 ```
 
 
+## ELB
+
+- For the moment, the ELB only supports instances. 
+- Be careful with the visitors IP through ELB, it may appear only ELB ip in log.
+
 
 
 # References
