@@ -88,6 +88,38 @@ response = client.change_resource_record_sets(
 - Be careful with the visitors IP through ELB, it may appear only ELB ip in log.
 
 
+## SSL certificate
+
+### extract the information from `.pem` file
+
+```bash
+$ openssl x509 -in plotly_wildcard_cert.pem -out server.crt # server certificate
+$ openssl pkey -in plotly_wildcard_cert.pem -out key.pem # private key
+```
+
+
+update the key
+
+```bash
+$ aws iam upload-server-certificate --server-certificate-name certificate_object_name --certificate-body file://public_key_certificate_file --private-key file://privatekey.pem --certificate-chain file://certificate_chain_file --path /cloudfront/
+```
+
+list all keys
+
+```bash
+aws iam list-server-certificates
+```
+
+verify a key
+
+```bash
+
+```
+
+### Reference
+
+- http://docs.aws.amazon.com/IAM/latest/UserGuide/id_credentials_server-certs_manage.html#UploadSignedCert
+
 
 # References
 
