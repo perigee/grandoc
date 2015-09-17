@@ -84,5 +84,9 @@ response = client.change_resource_record_sets(
 
 
 
+# References
 
+The tags are put into *[ ]* for easy recalling.
+
+- [cloudfront, s3, route53] http://www.michaelgallego.fr/blog/2013/08/27/static-website-on-s3-cloudfront-and-route-53-the-right-way/
 
