@@ -95,3 +95,5 @@ The tags are put into *[ ]* for easy recalling.
 
 - [cloudfront, s3, route53] http://www.michaelgallego.fr/blog/2013/08/27/static-website-on-s3-cloudfront-and-route-53-the-right-way/
 - [cloudfront, s3, ssl] https://bryce.fisher-fleig.org/blog/setting-up-ssl-on-aws-cloudfront-and-s3/
+- [cloudfront, s3, ssl] https://www.tiredpixel.com/2014/09/01/secure-static-websites-using-aws-s3-ssl-aws-cloudfront-and-aws-route-53/
+- [blog, aws, python] https://www.tiredpixel.com/
