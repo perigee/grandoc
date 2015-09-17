@@ -16,6 +16,12 @@ Finally, either use route53 failover (with weighted routing rule, add extreme we
 
 
 
+## Attention
+
+- The multiple redirection of alias domain may be broken because of the CNAME setting in CloudFront. (Need deep investigation)
+- Another solution may just launch up an instance with maintenance page only, and join it into ELB. 
+
+
 
 # Route53 DNS failover
 
